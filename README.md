@@ -13,26 +13,26 @@ DevStack je lokální vývojové prostředí pro psaní PHP aplikací. Tento dev
 
 # LOKÁLNÍ INSTALACE DEVSTACKU
 
-## INSTALACE APACHE
+## 1. INSTALACE APACHE
 
 1. spustíme CLI jako administrátor
 2. cd C:\dev\apache\bin
 3. spustíme příkaz pro instalaci: httpd.exe -k install -n "Apache2.4-PhpFastCgi"
 4. tento příkaz nám nainstaloval Windows službu pojmenovanou "Apache2.4-PhpFastCgi", která se při každém spuštění počítače automaticky zapne
 
-## INSTALACE ApacheMonitor.exe PO SPUŠTĚNÍ
+## 2. INSTALACE ApacheMonitor.exe PO SPUŠTĚNÍ
 
 Zkopírujeme soubor "C:\dev\apache\bin\ApacheMonitor.exe" do:
 C:\Users\{uživatel}\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 (pokud složka AppData není vidìt, je tøeba povolit v prùzkumníkovi skryté soubory)
 
-## PŘIDÁNÍ VIRTUALHOST (nového projektu)
+## 3. PŘIDÁNÍ VIRTUALHOST (nového projektu)
 
 1. cd C:\dev\apache\conf\extra
 2. upravíme soubor "httpd-vhosts.conf", kam pøidáme nový VirtualHost
 3. vytvoøíme složku uvnitø C:\dev\www (zde je root celého serveru)
 
-## ODINSTALACE APACHE
+# ODINSTALACE APACHE
 
 1. spustíme CLI jako administrátor
 2. cd C:\dev\apache\bin
