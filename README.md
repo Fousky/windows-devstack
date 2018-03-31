@@ -1,40 +1,53 @@
-INSTALACE APACHE
------------------------------------
-1. spustíme CLI jako administrátor
+# CO TO JE?
+
+DevStack je lokÃ¡lnÃ­ vÃ½vojovÃ© prostÅ™edÃ­ pro psanÃ­ PHP aplikacÃ­. Tento devstack umoÅ¾Åˆuje vyvÃ­jet aplikace psanÃ© v rÅ¯znÃ½ch verzÃ­ch PHP na systÃ©mu Windows.
+
+# CO DEVSTACK OBSAHUJE?
+
+- Apache 2.4
+- PHP 5.6 jako FastCGI nebo CLI
+- PHP 7.0 jako FastCGI nebo CLI
+- PHP 7.1 jako FastCGI nebo CLI
+- PHP 7.2 jako FastCGI nebo CLI
+- .bat soubory, kterÃ© umoÅ¾ÅˆujÃ­ rychlÃ© pÅ™epÃ­nÃ¡nÃ­ PHP pro CLI
+
+# LOKÃLNÃ INSTALACE DEVSTACKU
+
+## INSTALACE APACHE
+
+1. spustÃ­me CLI jako administrÃ¡tor
 2. cd C:\dev\apache\bin
-3. spustíme pøíkaz pro instalaci: httpd.exe -k install -n "Apache2.4-PhpFastCgi"
-4. tento pøíkaz nám nainstaloval Windows slubu pojmenovanou "Apache2.4-PhpFastCgi", která se pøi kadém spuštìní poèítaèe automaticky zapne
+3. spustÃ­me pÅ™Ã­kaz pro instalaci: httpd.exe -k install -n "Apache2.4-PhpFastCgi"
+4. tento pÅ™Ã­kaz nÃ¡m nainstaloval Windows sluÅ¾bu pojmenovanou "Apache2.4-PhpFastCgi", kterÃ¡ se pÅ™i kaÅ¾dÃ©m spuÅ¡tÄ›nÃ­ poÄÃ­taÄe automaticky zapne
 
-INSTALACE ApacheMonitor.exe PO SPUŠTÌNÍ
------------------------------------
-Zkopírujeme soubor "C:\dev\apache\bin\ApacheMonitor.exe" do:
-C:\Users\{uivatel}\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
-(pokud sloka AppData není vidìt, je tøeba povolit v prùzkumníkovi skryté soubory)
+## INSTALACE ApacheMonitor.exe PO SPUÅ TÄšNÃ
 
-PØIDÁNÍ VIRTUALHOST (nového projektu)
------------------------------------
+ZkopÃ­rujeme soubor "C:\dev\apache\bin\ApacheMonitor.exe" do:
+C:\Users\{uÅ¾ivatel}\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+(pokud sloÅ¾ka AppData nenÃ­ vidÃ¬t, je tÃ¸eba povolit v prÃ¹zkumnÃ­kovi skrytÃ© soubory)
+
+## PÅ˜IDÃNÃ VIRTUALHOST (novÃ©ho projektu)
+
 1. cd C:\dev\apache\conf\extra
-2. upravíme soubor "httpd-vhosts.conf", kam pøidáme novı VirtualHost
-3. vytvoøíme sloku uvnitø C:\dev\www (zde je root celého serveru)
+2. upravÃ­me soubor "httpd-vhosts.conf", kam pÃ¸idÃ¡me novÃ½ VirtualHost
+3. vytvoÃ¸Ã­me sloÅ¾ku uvnitÃ¸ C:\dev\www (zde je root celÃ©ho serveru)
 
+## ODINSTALACE APACHE
 
-ODINSTALACE APACHE
------------------------------------
-1. spustíme CLI jako administrátor
+1. spustÃ­me CLI jako administrÃ¡tor
 2. cd C:\dev\apache\bin
-3. spustíme pøíkaz pro odinstalaci: httpd.exe -k uninstall -n "Apache2.4-PhpFastCgi"
+3. spustÃ­me pÃ¸Ã­kaz pro odinstalaci: httpd.exe -k uninstall -n "Apache2.4-PhpFastCgi"
 
+# PÅ˜EPÃNÃNÃ VERZÃ PHP V CLI
 
-PØEPÍNÁNÍ VERZÍ PHP V CLI
------------------------------------
-Do systémové promìnné PATH je tøeba pøidat následující poloky:
+Do systÃ©movÃ© promÄ›nnÃ© PATH je tÅ™eba pÅ™idat nÃ¡sledujÃ­cÃ­ poloÅ¾ky:
 C:\dev\bin
 %PhpPath%
 
-Následnì je moné vyuít pøíkazy uvnitø bin/:
+NÃ¡slednÄ› je moÅ¾nÃ© vyuÅ¾Ã­t pÅ™Ã­kazy uvnitÅ™ bin/:
 set-php5.6
 set-php7.0
 set-php7.1
 set-php7.2
 
-pøíkazy je nutné spustit jako administrátor a následnì vypnout všechna CLI + spustit znovu jejich instance.
+pÅ™Ã­kazy je nutnÃ© spustit jako administrÃ¡tor a nÃ¡slednÄ› vypnout vÅ¡echna CLI + spustit znovu jejich instance.
