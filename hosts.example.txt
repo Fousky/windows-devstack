@@ -1,0 +1,9 @@
+
+127.0.0.1 php5.6.localhost
+127.0.0.1 php7.0.localhost
+127.0.0.1 php7.1.localhost
+127.0.0.1 php7.2.localhost
+127.0.0.1 symfony-demo.localhost
+
+127.0.0.1       localhost
+::1             localhost

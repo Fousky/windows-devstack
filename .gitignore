@@ -1,0 +1,39 @@
+
+/apache/logs/*
+
+/www/symfony-demo.localhost/build/*
+/www/symfony-demo.localhost/node_modules/*
+/www/symfony-demo.localhost/var/*
+!/www/symfony-demo.localhost/var/cache
+/www/symfony-demo.localhost/var/cache/*
+!/www/symfony-demo.localhost/var/cache/.gitkeep
+!/www/symfony-demo.localhost/var/data
+!/www/symfony-demo.localhost/var/log
+/www/symfony-demo.localhost/var/log/*
+!/www/symfony-demo.localhost/var/log/.gitkeep
+!/www/symfony-demo.localhost/var/sessions
+/www/symfony-demo.localhost/var/sessions/*
+!/www/symfony-demo.localhost/var/sessions/.gitkeep
+!/www/symfony-demo.localhost/var/SymfonyRequirements.php
+/www/symfony-demo.localhost/public/build/fonts/glyphicons-*
+/www/symfony-demo.localhost/public/build/images/glyphicons-*
+
+###> symfony/framework-bundle ###
+/www/symfony-demo.localhost/.env
+/www/symfony-demo.localhost/public/bundles/
+/www/symfony-demo.localhost/var/
+/www/symfony-demo.localhost/vendor/
+###< symfony/framework-bundle ###
+
+###> symfony/phpunit-bridge ###
+/www/symfony-demo.localhost/phpunit.xml
+###< symfony/phpunit-bridge ###
+
+###> symfony/web-server-bundle ###
+/www/symfony-demo.localhost/.web-server-pid
+###< symfony/web-server-bundle ###
+
+###> friendsofphp/php-cs-fixer ###
+/www/symfony-demo.localhost/.php_cs
+/www/symfony-demo.localhost/.php_cs.cache
+###< friendsofphp/php-cs-fixer ###
